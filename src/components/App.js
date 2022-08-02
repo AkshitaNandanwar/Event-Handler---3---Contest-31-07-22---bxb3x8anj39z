@@ -4,20 +4,20 @@ const App = () => {
 
   const handleInput = (event) =>{
    // use console.log
-    console.log(event.target.value);
+    console.log(`Input in #${event.target.id} is ${event.target.value}`);
   }
 
   // do not change id of input elements
   return (
     <div id="main">
       <label htmlFor='text-input'>Text Input:- </label>
-      <input id="text-input" type={'text'}  onChange ={(e)=> handleInput(e)} />
+      <input id="text-input" type={'text'}  onChange={(e)=> handleInput(e)} />
 
       <br/>
       <br/>
 
       <label htmlFor='num-input'>Number input</label>
-      <input id="num-input" type={'number'}  onChange ={(e)=> handleInput(e)} />
+      <input id="num-input" type={'number'}  onChange={(e)=> handleInput(e)} />
       <br/>
     </div>
   )
